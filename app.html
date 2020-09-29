@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Taxi Queue Solution</title>
+
+    <!--link css files-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1><span>Passengers</span> details!</h1>
+        <br />
+        <div class="row">
+            <label for="username" class="passengerName"> Name:</label> 
+            <input type="text" id="name" name="name">
+            <br />
+            <br />
+            <label for="destination" class="label-2">Start destination:</label>
+            <select name="location" id="location-select">
+                <!-- <option value="">----choose an option----</option> -->
+                <option value="Cape Town">Cape Town</option>
+                <option value="Khayelitsha">Khayelitsha</option>
+                <option value="Delft">Delft</option>
+                <option value="Gugulethu">Gugulethu</option>
+                <option value="Mitchells Plain">Mitchells Plain</option>
+
+            </select>
+            <br />
+            <br/>
+
+            <label for="destination" class="label-2">End destination:</label>
+            <select name="passenger" id="passenger-select">
+                <!-- <option value="">----choose an option----</option> -->
+                <option value="Cape Town">Cape Town</option>
+                <option value="Sea Point">Sea Point</option>
+                <option value="Century City">Century City</option>
+                <option value="Claremont">Claremont</option>
+                <option value="Bellville">Bellville</option>
+
+            </select>
+
+            <p>Depart Time: <span id="time"></span></p>
+            <p>Arrival Time: <span id="time"></span></p>
+            <p class="pricecount">Price:</p>
+            <!-- <script>
+                var currentTime = new Date().toLocaleTimeString()
+            </script> -->
+        </div>
+    </div>
+</body>
+
+</html>
