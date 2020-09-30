@@ -29,7 +29,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.get('/',  function (req, res) {  
   beep(3,[1000])
-  // new Beep(22050).play(1000, 1, [Beep.utils.amplify(8000)]);
   res.render("home", {
    
   })
