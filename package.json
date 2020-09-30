@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ammaar345/taxi-queue#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "express-flash": "0.0.2",
     "flash": "^1.1.0",
     "pg": "^8.3.3"
