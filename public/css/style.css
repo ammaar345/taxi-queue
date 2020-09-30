@@ -6,7 +6,7 @@ body{
     padding: 0 0px;
     box-sizing: border-box;
     background-color:#444343 ;
-    font-size: medium;
+    font-size: large;
 }
 /* button{
 width: 7em;
@@ -48,7 +48,7 @@ p{
     color: #f1bf59;
 }
 
-button{
+input[type="submit"]{
     box-sizing: border-box;
       cursor: pointer;
       border-radius: 5px;
@@ -74,7 +74,7 @@ width: auto;
 h1,h2,h3,h4{
     display: inline-block;
 }
-button:hover{
+input[type="submit"]:hover{
  background-color:  lightseagreen; 
  color: black ; 
 }

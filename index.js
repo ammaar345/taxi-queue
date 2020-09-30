@@ -41,6 +41,15 @@ app.post("/taxi-association", async function (req, res) {
     
   })
 })
+app.post("/checkout",async function (req,res)
+{
+res.render("checkout",{
+
+})
+
+
+})
+
 app.post("/availability",async function(req,res){
 
 res.render("availability",{
