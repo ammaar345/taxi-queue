@@ -7,6 +7,9 @@ let taxiFunction=taxi()
 const flash = require('express-flash');
 const session = require('express-session');
 const pg = require("pg");
+// var Chart = require('chart.js');
+//  var ctx = 'myChart';
+// var ctx = $("#myChart").getContext("2d");
 
 const Pool = pg.Pool;
 var beep = require('beepbeep')
@@ -40,7 +43,7 @@ app.get('/', async function (req, res) {
 app.post("/taxi-association",  function (req, res) {
  
   res.render("association", {
-    
+      age: 93
   })
 })
 app.post("/availability", function(req,res){

@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Document</title>
     
 </head>
 <body>
    <h1>Graph stating the amount of users using a taxi between morning and afternoon in the given areas stated in the graph key below.</h1>
-  <canvas id="myChart" width="400" height="400"></canvas>
+  {{!-- <canvas id="myChart" name="myChart" width="400" height="400">{{graph}}</canvas> --}}
+   </div>
+   
+   </body>
+   <canvas id="myChart" width="400" height="400"></canvas>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js" integrity="sha512-QEiC894KVkN9Tsoi6+mKf8HaCLJvyA6QIRzY5KrfINXYuP9NxdIkRQhGq3BZi0J4I7V5SidGM3XUQ5wFiMDuWg==" crossorigin="anonymous"></script>
+
 <script>
-
-
-     var ctx = document.getElementById('myChart')
-  var myChart = new Chart(ctx, {
+var ctx = document.getElementById('myChart');
+var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
@@ -49,11 +54,5 @@
         }
     }
 });
-
-    </script>
-
-   </div>
-   
-   </body>
-   
+</script>
 </html>
