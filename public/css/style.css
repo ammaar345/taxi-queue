@@ -16,7 +16,7 @@ label {
     color: #fff;
 }
 
-h1 span{
+h1,h2 span{
     color: lightgreen;
 }
 
@@ -81,7 +81,7 @@ body,
 }
 
 .myButton {
-    margin-left:100px;;
+    margin-left:115px;;
 }
 
 #timeCount{
@@ -91,5 +91,5 @@ body,
 }
 
 #styled-select{
-    width: 100px; 
+    width: 129px; 
 }
