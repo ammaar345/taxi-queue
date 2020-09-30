@@ -52,18 +52,6 @@ app.post("/passenger", async function (req, res) {
   
   })
 })
-
-
-// app.get("/counter/:name", async function (req, res) {
-
-
-//   res.render("", {
-//     name,
-//     nameCount
-//   }
-//   )
-// })
-
 const PORT = process.env.PORT || 5801;
 app.listen(PORT, function () {
 
