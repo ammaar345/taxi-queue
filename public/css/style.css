@@ -7,6 +7,7 @@ body{
     box-sizing: border-box;
     
 }
+select{width: 7 em;}
 /* button{
 width: 7em;
 } */
@@ -20,10 +21,10 @@ h1,h2 span{
     color: lightgreen;
 }
 
-select {
+/* select {
     font-size: 0.9rem;
     padding: 2px 5px;
-}
+} */
 
 .label-2 {
     font-size: 1rem;
@@ -90,6 +91,12 @@ body,
     right:0;
 }
 
+<<<<<<< HEAD
 #styled-select{
     width: 129px; 
 }
+=======
+/* #styled-select{
+    width: 100px; 
+} */
+>>>>>>> 2f469b08e8f36c2fe182eaed11556bb8823fd72a

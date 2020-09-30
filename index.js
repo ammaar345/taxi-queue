@@ -2,11 +2,15 @@ const express = require("express");
 const exphbs = require('express-handlebars');
 const bodyParser = require("body-parser")
 const app = express();
-//const Greet = require("./greet");
+const taxi = require("./taxi");
+let taxiFunction=taxi()
 const flash = require('express-flash');
 const session = require('express-session');
 const pg = require("pg");
+
 const Pool = pg.Pool;
+var beep = require('beepbeep')
+
 const connectionString = process.env.DATABASE_URL || 'postgresql://sneakygoblin:codex123@localhost:5432/greetings_webapp';
 const pool = new Pool({
     connectionString
@@ -27,13 +31,13 @@ app.use(express.static("public"))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.get('/', async function (req, res) {
-  
+  beep(3[1000])
   res.render("home", {
    
   })
 })
 
-app.post("/taxi-association", async function (req, res) {
+app.post("/taxi-association",  function (req, res) {
 
 
 
@@ -41,19 +45,21 @@ app.post("/taxi-association", async function (req, res) {
     
   })
 })
-app.post("/availability",async function(req,res){
+app.post("/availability", function(req,res){
+ 
+
 
 res.render("availability",{
-
+  
 })
 })
-app.post("/checkout",async function(req,res){
+app.post("/checkout", function(req,res){
 
   res.render("checkout",{
   
   })
   })
-app.post("/passenger", async function (req, res) {
+app.post("/passenger",  function (req, res) {
    res.render("passenger", {
   
   })
