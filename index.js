@@ -38,9 +38,7 @@ app.get('/', async function (req, res) {
 })
 
 app.post("/taxi-association",  function (req, res) {
-
-
-
+ 
   res.render("association", {
     
   })
@@ -50,7 +48,7 @@ app.post("/availability", function(req,res){
 
 
 res.render("availability",{
-  
+
 })
 })
 app.post("/checkout", function(req,res){
