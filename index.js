@@ -7,6 +7,7 @@ const flash = require('express-flash');
 const session = require('express-session');
 const pg = require("pg");
 const Pool = pg.Pool;
+var beep = require('beepbeep')
 const connectionString = process.env.DATABASE_URL || 'postgresql://sneakygoblin:codex123@localhost:5432/greetings_webapp';
 const pool = new Pool({
     connectionString
@@ -27,7 +28,7 @@ app.use(express.static("public"))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.get('/', async function (req, res) {
-  beep(3)
+  beep(3[1000])
   res.render("home", {
    
   })
