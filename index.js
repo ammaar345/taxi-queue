@@ -33,23 +33,17 @@ app.get('/', async function (req, res) {
   })
 })
 
-app.post("/driver", async function (req, res) {
-
-//   
-//   let flash = await greet.flshMsg(name);
-//   if (flash) {
-//     req.flash("info", "Enter a name")
-
-//   }
+app.post("/taxi-association", async function (req, res) {
 
 
-  res.render("driver", {
+
+  res.render("association", {
     
   })
 })
-app.post("/available",async function(req,res){
+app.post("/availability",async function(req,res){
 
-res.render("available",{
+res.render("availability",{
 
 })
 })

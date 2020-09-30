@@ -6,19 +6,20 @@ body{
     padding: 0 0px;
     box-sizing: border-box;
     background-color:#444343 ;
+    font-size: medium;
 }
 /* button{
 width: 7em;
 } */
 label {
     display: inline-block;
-    font: 0.9rem 'Fira Sans', sans-serif;
+    /* font: 0.9rem 'Fira Sans', sans-serif; */
     color: #fff;
 }
 
 .passengerName{
     padding-left: 1em;
-    font-size: 1rem;
+    /* font-size: 1rem; */
 }
 
 h1 span{
@@ -26,12 +27,12 @@ h1 span{
 }
 
 select {
-    font-size: 0.9rem;
+    /* font-size: 0.9rem; */
     padding: 2px 5px;
 }
 
 .label-2 {
-    font-size: 1rem;
+    /* font-size: 1rem; */
     /* padding-right: 10px; */
 }
 
@@ -67,10 +68,12 @@ button{
       line-height: 38px;
       margin: 0;
       background-color:#696969;
-
+width: auto;
      
 }
-
+h1,h2,h3,h4{
+    display: inline-block;
+}
 button:hover{
  background-color:  lightseagreen; 
  color: black ; 
