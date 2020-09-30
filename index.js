@@ -6,6 +6,7 @@ const app = express();
 const flash = require('express-flash');
 const session = require('express-session');
 const pg = require("pg");
+var beep = require('beepbeep')
 const Pool = pg.Pool;
 const connectionString = process.env.DATABASE_URL || 'postgresql://sneakygoblin:codex123@localhost:5432/greetings_webapp';
 const pool = new Pool({
@@ -26,14 +27,15 @@ app.engine('handlebars', exphbs({
 app.use(express.static("public"))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-app.get('/', async function (req, res) {
-  
+app.get('/',  function (req, res) {  
+  beep(3,[1000])
+  // new Beep(22050).play(1000, 1, [Beep.utils.amplify(8000)]);
   res.render("home", {
    
   })
 })
 
-app.post("/taxi-association", async function (req, res) {
+app.post("/taxi-association",  function (req, res) {
 
 
 
@@ -41,7 +43,7 @@ app.post("/taxi-association", async function (req, res) {
     
   })
 })
-app.post("/checkout",async function (req,res)
+app.post("/checkout", function (req,res)
 {
 res.render("checkout",{
 
@@ -50,13 +52,13 @@ res.render("checkout",{
 
 })
 
-app.post("/availability",async function(req,res){
+app.post("/availability", function(req,res){
 
 res.render("availability",{
 
 })
 })
-app.post("/passenger", async function (req, res) {
+app.post("/passenger",  function (req, res) {
    res.render("passenger", {
   
   })
