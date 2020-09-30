@@ -47,6 +47,12 @@ res.render("availability",{
 
 })
 })
+app.post("/checkout",async function(req,res){
+
+  res.render("checkout",{
+  
+  })
+  })
 app.post("/passenger", async function (req, res) {
    res.render("passenger", {
   

@@ -23,7 +23,7 @@
             <br />
             <label for="destination" class="label-2">Start destination:</label>
             <select name="location" id="location-select">
-                <!-- <option value="">----choose an option----</option> -->
+               
                 <option value="Cape Town">Cape Town</option>
                 <option value="Khayelitsha">Khayelitsha</option>
                 <option value="Delft">Delft</option>
@@ -47,6 +47,10 @@
 
             <p>Depart Time: <span id="time"></span></p>
             <p>Arrival Time: <span id="time"></span></p>
+           
+            <form action="/checkout" method="POST">
+<input type="submit" value="Confirm">
+</form>
             <p class="pricecount">Price:</p>
             <!-- <script>
                 var currentTime = new Date().toLocaleTimeString()

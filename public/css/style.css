@@ -1,25 +1,19 @@
 body{
-    position: relative;
+    /* position: relative;
     width: 300px;
-    height: 300px;
-    margin: 0 auto;
-    padding: 0 0px;
+    height: 300px; */
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    background-color:#444343 ;
-    font-size: medium;
+    
 }
 /* button{
 width: 7em;
 } */
 label {
     display: inline-block;
-    /* font: 0.9rem 'Fira Sans', sans-serif; */
+    font: 0.9rem 'Fira Sans', sans-serif;
     color: #fff;
-}
-
-.passengerName{
-    padding-left: 1em;
-    /* font-size: 1rem; */
 }
 
 h1 span{
@@ -27,34 +21,25 @@ h1 span{
 }
 
 select {
-    /* font-size: 0.9rem; */
+    font-size: 0.9rem;
     padding: 2px 5px;
 }
 
 .label-2 {
-    /* font-size: 1rem; */
-    /* padding-right: 10px; */
+    font-size: 1rem;
 }
-
-h4{
-    color: lightgreen;
-}
-
-h1{
-    color:lightgray ;
-}
-
 p{
     color: #f1bf59;
 }
 
-button{
+input[type="submit"]{
     box-sizing: border-box;
       cursor: pointer;
       border-radius: 5px;
       border: 1px solid;
       background-color: transparent;
       text-decoration: none;
+      box-shadow: lightseagreen;
       text-transform: uppercase;
       display: inline-block;
       height: 38px;
@@ -67,20 +52,53 @@ button{
       font-weight: 600;
       line-height: 38px;
       margin: 0;
-      background-color:#696969;
-width: auto;
+      background-color:#72A793;
+
      
 }
-h1,h2,h3,h4{
-    display: inline-block;
-}
-button:hover{
- background-color:  lightseagreen; 
+
+input[type="submit"]:hover{
+ background-color: lightseagreen; 
  color: black ; 
 }
 
 .container{
-    /* padding-left: 2em;
-    padding-right: 2em;
- border: 1px solid black; */
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 350px;
+   background-color:#394f55 ;
+   color: white;
+   padding: 40px;
+}
+
+/* .piechart { 
+    margin-top: 300px; 
+    display: block; 
+    position: absolute; 
+    width: 400px; 
+    height: 400px; 
+    border-radius: 50%; 
+    background-image: conic-gradient( 
+        pink 70deg,  
+        lightblue 0 235deg,  
+        orange 0); 
+}  */
+
+body, 
+.piechart { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.myButton {
+    margin-left:100px;;
+}
+
+#timeCount{
+    position:absolute;
+    top: 12px;
+    right:0;
 }
