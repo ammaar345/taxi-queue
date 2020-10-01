@@ -16,7 +16,7 @@ module.exports = function taxiApp(pool) {
         // else {
         //     price = 10
         // }
-        return price
+        return price;
 
     }
 
