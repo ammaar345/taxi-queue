@@ -64,7 +64,7 @@ app.post("/passenger",async function (req, res) {
 
 app.post("/checkout",async function (req, res) {
 
-  res.render("passenger", {
+  res.render("checkout", {
     price:"0.00"
   })
 })
