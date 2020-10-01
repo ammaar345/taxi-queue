@@ -21,20 +21,19 @@ module.exports = function taxiApp(pool) {
             bookJourney()
         }
     }
-function insertBooking(name){
-    var INSERT_QUERY="insert into booking (names) values($1)"
-    await pool.query(INSERT_QUERY,[name])
-}
+    async function insertBooking(name) {
+        var INSERT_QUERY = "insert into booking (names) values($1)"
+        await pool.query(INSERT_QUERY, [name])
+    }
     async function bookJourney(name, startPoint, endPoint) {
         var msg = "";
         if (name) {
             if (startPoint !== endPoint) {
                 const INSERT_QUERY = ' insert into taxi_journey (start_location,end_location,price) values ($1,$2,$3)';
-                await pool.query(INSERT_QUERY, [startPoint,endPoint,whichPrice(startPoint,endPoint)]);
+                await pool.query(INSERT_QUERY, [startPoint, endPoint, whichPrice(startPoint, endPoint)]);
                 insertBooking(name)
                 msg = "Your journey has been booked successfully." //then add to database 
-            }
-            else {
+            } else {
                 msg = "Please fill in the required details above."
             }
             return msg

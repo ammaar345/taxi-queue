@@ -1,23 +1,31 @@
-body{
+body {
     background-image: url("taxi.webp");
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    /* background-color:#444343 ; */
+    font-size: large;
 }
-select{width: 7 em;}
+
+select {
+    width: 7 em;
+}
+
+
 /* button{
 width: 7em;
 } */
+
 label {
     display: inline-block;
     font: 0.9rem 'Fira Sans', sans-serif;
     color: #fff;
 }
 
-h1 span{
+h1 span {
     color: lightgreen;
 }
+
 
 /* select {
     font-size: 0.9rem;
@@ -27,82 +35,90 @@ h1 span{
 .label-2 {
     font-size: 1rem;
 }
-p{
+
+p {
     color: #f1bf59;
 }
 
-input[type="submit"]{
+input[type="submit"] {
     box-sizing: border-box;
-      cursor: pointer;
-      border-radius: 5px;
-      border: 1px solid;
-      background-color: transparent;
-      text-decoration: none;
-      box-shadow: lightseagreen;
-      text-transform: uppercase;
-      display: inline-block;
-      height: 38px;
-      padding: 0 30px;
-      letter-spacing: .1rem;
-      white-space: nowrap;
-      color: lightgoldenrodyellow;
-      text-align: center;
-      font-size: 11px;
-      font-weight: 600;
-      line-height: 38px;
-      margin: 0;
-      background-color:#72A793;
-
-     
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid;
+    background-color: transparent;
+    text-decoration: none;
+    box-shadow: lightseagreen;
+    text-transform: uppercase;
+    display: inline-block;
+    height: 38px;
+    padding: 0 30px;
+    letter-spacing: .1rem;
+    white-space: nowrap;
+    color: lightgoldenrodyellow;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 38px;
+    margin: 0;
+    background-color: #72A793;
 }
 
-input[type="submit"]:hover{
- background-color: lightseagreen;} 
-h1,h2,h3,h4{
+input[type="submit"]:hover {
+    background-color: lightseagreen;
+}
+
+h1,
+h2,
+h3,
+h4 {
     display: inline-block;
 }
-input[type="submit"]:hover{
- background-color:  lightseagreen; 
- color: black ; 
+
+input[type="submit"]:hover {
+    background-color: lightseagreen;
+    color: black;
 }
 
-.container{
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   width: 350px;
-   background-color:#394f55 ;
-   color: white;
-   padding: 40px;
-   border-radius: 5px;
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    background-color: #394f55;
+    color: white;
+    padding: 40px;
+    border-radius: 5px;
 }
 
-body, 
-.piechart { 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
+body,
+.piechart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .myButton {
-    margin-left:115px;;
+    margin-left: 115px;
+    ;
 }
 
-#timeCount{
-    position:absolute;
+#timeCount {
+    position: absolute;
     top: 12px;
-    right:0;
+    right: 0;
 }
 
-#styled-select{
-    width: 129px; 
-}
-h2 span{
-    color:lightgray ;
+#styled-select {
+    width: 129px;
 }
 
-input[type=text], select{
+h2 span {
+    color: lightgray;
+}
+
+input[type=text],
+select {
     width: 60%;
     padding: 2px 2px;
     margin: 2px 0;
@@ -112,3 +128,44 @@ input[type=text], select{
     box-sizing: border-box;
 }
 
+.alert {
+    padding: 20px;
+    background-color: green;
+    color: white;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+.alerttwo {
+    padding: 20px;
+    background-color: red;
+    color: white;
+}
+
+.closebtntwo {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtntwo:hover {
+    color: black;
+}

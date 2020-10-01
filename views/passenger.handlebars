@@ -15,59 +15,54 @@
 <body>
     <div class="container">
         <h1><span>Passengers</span> details!</h1>
-        <br/>
+        <br />
         <div class="row">
             <label for="username" class="passengerName">Passenger name:</label>
             <input type="text" id="name" name="name" value="" size="14">
             <br />
             <br />
-            <form action="/passenger" method="POST">
-            <label for="destination" class="label-2">Start destination:</label>
-            <select name="startP" id="styled-select">
+            <form action="/checkout" method="POST">
+                <label for="destination" class="label-2">Start destination:</label>
+                <select name="startP" id="styled-select">
 
-                <option value="C">Cape Town</option>
-                <option value="K">Khayelitsha</option>
-                <option value="D">Delft</option>
-                <option value="G">Gugulethu</option>
-                <option value="MP">Mitchells Plain</option>
+                    <option value="C">Cape Town</option>
+                    <option value="K">Khayelitsha</option>
+                    <option value="D">Delft</option>
+                    <option value="G">Gugulethu</option>
+                    <option value="MP">Mitchells Plain</option>
 
-            </select>
-            <br/>
-            <br/>
+                </select>
+                <br />
+                <br />
 
-            <label for="destination" class="label-2">End :</label>
-            <select name="endP" id="passenger-select">
-                <!-- <option value="">----choose an option----</option> -->
-                <option value="C">Cape Town</option>
-                <option value="K">Khayelitsha</option>
-                <option value="D ">Delft</option>
-                <option value="G">Gugulethu</option>
-                <option value="MP">Mitchells Plain</option>
+                <label for="destination" class="label-2">End destination :</label>
+                <select name="endP" id="styled-select">
+                    <!-- <option value="">----choose an option----</option> -->
+                    <option value="C">Cape Town</option>
+                    <option value="K">Khayelitsha</option>
+                    <option value="D ">Delft</option>
+                    <option value="G">Gugulethu</option>
+                    <option value="MP">Mitchells Plain</option>
 
-            </select>
-            <br />
-            <br />
-            <label for="destination" class="label-2">Departing Time:</label>
-            <select name="passenger" id="styled-select">
+                </select>
+                <br />
+                <br />
+                <label for="destination" class="label-2">Departing Time:</label>
+                <select name="passenger" id="styled-select">
 
-                <option value="07:00-09:00am">07:00-09:00am</option>
-                <option value="09:00-11:00am">09:00-11:00am</option>
-                <option value="13:00-15:00am">13:00-15:00am</option>
+                    <option value="07:00-09:00am">07:00-09:00am</option>
+                    <option value="09:00-11:00am">09:00-11:00am</option>
+                    <option value="13:00-15:00am">13:00-15:00am</option>
 
-            </select>
-            <br/>
-            <br/>
+                </select>
+                <br />
+                <br />
+                <div class="myButton">
 
-            <p>Depart Time: <span id="time"><select name="location" id="location-select">
-                <!-- <option value="">----choose an option----</option> -->
-                <option value="Cape Town">07:00-09:00</option>
-                <option value="Khayelitsha">10:00-12:00</option>
-                <option value="Delft">16:00-18:00</option>
-            </select></span></p>
+                    <input type="submit" name="btnConfirm" id="" value="Confirm">
+                </div>
+            </form>
             
-            <input type="submit" name="btnConfirm" id="" value="Confirm">
-</form>
-            <p class="pricecount">Price:</p>
             <!-- <script>
                 var currentTime = new Date().toLocaleTimeString()
             </script> -->

@@ -19,24 +19,20 @@
         var chart = new CanvasJS.Chart("chartContainer",
         {
             colorSet: "greenShades",
-            backgroundColor: "394f55",
+            backgroundColor: "#394f55",
             title:{
-                text: "Custom Color Set"
+                text: "Taxi Usage"
             },
             data: [
             {        
                 type: "column",
                 dataPoints: [
 
-                { x: 10, y: 71 },
-                { x: 20, y: 55},
-                { x: 30, y: 50 },
-                { x: 40, y: 65 },
-                { x: 50, y: 95 },
-                { x: 60, y: 68 },
-                { x: 70, y: 28 },
-                { x: 80, y: 34 },
-                { x: 90, y: 14}
+                { x: 10, y: 71 , label: "CapeTown" },
+                { x: 20, y: 55 , label: "Khayelitsha"},
+                { x: 30, y: 50 , label: "Delft" },
+                { x: 40, y: 65 , label: "Gugulethu"},
+                { x: 50, y: 95 , label: "Mitchells Plain" }
 
                 ]
             }
