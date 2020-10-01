@@ -19,17 +19,28 @@ module.exports = function taxiApp(pool) {
         return price
 
     }
-    async function ifAvailable(availablility) {
-        if (availablility = true) {
-            bookJourney()
-        }
-    }
-  
+
 async function insertBooking(name){
     var INSERT_QUERY="insert into booking (names) values($1)"
     await pool.query(INSERT_QUERY,[name])
 }
+function passengers(){
+    var passengerCount=0
+    if(passengerCount<15){
+        passengerCount++;
+    }
+    else if(passengerCount=15){
+        beepbeep(2)
+        passengerCount=0;
+    }
+    return passengerCount;
+}
+function drivMsg(){
+return "Your taxi is ready to go!"
+
+}
     async function bookJourney(name, startPoint, endPoint) {
+     passengers() 
         var msg = "";
         if (name) {
             if (startPoint !== endPoint) {
@@ -46,21 +57,13 @@ async function insertBooking(name){
 
 
     }
-    async function taxiFill(passengers) {
-        if (passengers = 15) {
-           
-           
-            beepbeep(2)
-return "Your taxi is ready for drop off."
-        }
-    }
+
 
     return {
         whichPrice,
         bookJourney,
-        taxiFill,
-        ifAvailable,
-    
+        passengers,
+        drivMsg
     }
 
 
