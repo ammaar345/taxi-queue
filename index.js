@@ -7,7 +7,7 @@ const app = express();
 const pg = require("pg");
 var beep = require('beepbeep')
  const Pool = pg.Pool;
- const connectionString = process.env.DATABASE_URL || 'postgresql://codex:codex123@localhost:5432/greetings_webapp';
+ const connectionString = process.env.DATABASE_URL || 'postgresql://codex:codex123@localhost:5432/taxi_queue';
 const pool = new Pool({
   connectionString
 });
