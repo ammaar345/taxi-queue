@@ -6,50 +6,41 @@
     <title>Document</title>
 <script type="text/javascript">
 window.onload = function () {
-    var chart = new CanvasJS.Chart("chartContainer",
-    {
-        fontColor: "fff0000",
-        backgroundColor: "#394f55",
-        title:{
-            text: "Passengers Remaining"
-        },
-        legend: {
-            maxWidth: 350,
-            itemWidth: 120
-        },
-        data: [
-        {
-            type: "pie",
-            showInLegend: true,
-            legendText: "{indexLabel} #percent%",
-            indexLabel: "",
-            dataPoints: [
-                 { x: 10, y: 25 , indexLabel: "Passengers"},
-                 { x: 20, y: 50 , indexLabel: "" } 
-
-            ]
-        }
-        ]
-    });
-    chart.render();
+   // For a pie chart
+var chart = new Chart(ctx, {
+   type: 'pie',
+   data: {
+      labels: ['Open seats', 'Booked seats'],
+      datasets: [{
+         data: [{{open}}, {{booked}}],
+         backgroundColor: 'rgba(0,119, 220, 0.2)'
+      }]
+   },
+   options: {
+      pieceLabel: {
+         render: 'value' //show values
+      }
+   }
+});
 }
 </script>
- <p class="pricecount">Price:R{{price}}</p>
-<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+{{!-- <script src="https://cdn.rawgit.com/emn178/Chart.PieceLabel.js/master/build/Chart.PieceLabel.min.js"></script>  --}}
 </head>
 <body>
-    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+
+<canvas id="ctx"></canvas>
     <br/>
     <div class="alert">
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
    Booking Successful!
 </div>
-<div class="alerttwo">
+{{!-- <div class="alerttwo">
   <span class="closebtntwo" onclick="this.parentElement.style.display='none';">&times;</span>
   Booking Not Successful!
-</div>
+</div> --}}
 <br/>
-<p class="pricecount">Price:</p>
+<p class="pricecount">Price: R{{price}}</p>
 </body>
 </html>

@@ -2,6 +2,10 @@
 
 const beepbeep = require("beepbeep");
 
+let counterList = [];
+
+var passengerCount = 0;
+
 module.exports = function taxiApp(pool) {
     async function whichPrice(start, end) {
         var price = 0;
@@ -25,8 +29,12 @@ module.exports = function taxiApp(pool) {
         await pool.query(INSERT_QUERY, [name])
     }
 
+    function getCount() {
+        return
+    }
+
     function passengers() {
-        var passengerCount = 0
+
         if (passengerCount < 15) {
             passengerCount++;
         } else if (passengerCount = 15) {
