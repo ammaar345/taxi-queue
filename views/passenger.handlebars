@@ -15,33 +15,34 @@
 <body>
     <div class="container">
         <h1><span>Passengers</span> details!</h1>
-        <br />
+        <br/>
         <div class="row">
             <label for="username" class="passengerName">Passenger name:</label>
             <input type="text" id="name" name="name" value="" size="14">
             <br />
             <br />
+            <form action="/passenger" method="POST">
             <label for="destination" class="label-2">Start destination:</label>
-            <select name="location" id="styled-select">
+            <select name="startP" id="styled-select">
 
-                <option value="Cape Town">Cape Town</option>
-                <option value="Khayelitsha">Khayelitsha</option>
-                <option value="Delft">Delft</option>
-                <option value="Gugulethu">Gugulethu</option>
-                <option value="Mitchells Plain">Mitchells Plain</option>
+                <option value="C">Cape Town</option>
+                <option value="K">Khayelitsha</option>
+                <option value="D">Delft</option>
+                <option value="G">Gugulethu</option>
+                <option value="MP">Mitchells Plain</option>
 
             </select>
-            <br />
-            <br />
+            <br/>
+            <br/>
 
             <label for="destination" class="label-2">End :</label>
-            <select name="passenger" id="passenger-select">
+            <select name="endP" id="passenger-select">
                 <!-- <option value="">----choose an option----</option> -->
-                <option value="Cape Town">Cape Town</option>
-                <option value="Sea Point">Sea Point</option>
-                <option value="Century City">Century City</option>
-                <option value="Claremont">Claremont</option>
-                <option value="Bellville">Bellville</option>
+                <option value="C">Cape Town</option>
+                <option value="K">Khayelitsha</option>
+                <option value="D ">Delft</option>
+                <option value="G">Gugulethu</option>
+                <option value="MP">Mitchells Plain</option>
 
             </select>
 
@@ -51,7 +52,7 @@
                 <option value="Khayelitsha">10:00-12:00</option>
                 <option value="Delft">16:00-18:00</option>
             </select></span></p>
-            <form action="/checkout" method="POST">
+            
             <input type="submit" name="btnConfirm" id="" value="Confirm">
 </form>
             <p class="pricecount">Price:</p>
