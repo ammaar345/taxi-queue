@@ -1,4 +1,3 @@
-// const beepbeep = require("beepbeep");
 
 const beepbeep = require("beepbeep");
 
@@ -7,11 +6,11 @@ var passengerCount = 0;
 module.exports = function taxiApp(pool) {
     async function whichPrice(start, end) {
         var price = 0;
-        if (start === "C" && end === "D" || end === "D" && start === "C") {
+        if (start === "Cape Town" && end === "Delft" || end === "Delft" && start === "Cape Town") {
             price = 20;
         }
 
-        if (start === "K" && end === "C" || end === "K" && start === "C") {
+        if (start === "Khayelitsha" && end === "Cape Town" || end === "Khayelitsha" && start === "Cape Town") {
             price = 15;
         }
         // if (start&&end ===)
@@ -22,11 +21,7 @@ module.exports = function taxiApp(pool) {
 
     }
 
-    async function insertBooking(name) {
-        var INSERT_QUERY = "insert into booking (names) values($1)"
-        await pool.query(INSERT_QUERY, [name])
-    }
-
+   
     function passengers() {
 
         if (passengerCount < 15) {
@@ -48,6 +43,11 @@ module.exports = function taxiApp(pool) {
         return "Your taxi is ready to go!"
 
     }
+    async function insertBooking(name) {
+        var INSERT_QUERY = "insert into booking (name) values($1)"
+        await pool.query(INSERT_QUERY, [name])
+    }
+
     async function bookJourney(name, startPoint, endPoint) {
         passengers()
         var msg = "";

@@ -7,7 +7,7 @@ const app = express();
 const pg = require("pg");
 var beep = require('beepbeep')
 const Pool = pg.Pool;
-const connectionString = process.env.DATABASE_URL || 'postgresql://sim:ps123@localhost:5432/taxi_queue';
+const connectionString = process.env.DATABASE_URL || 'postgresql://sneakygoblin:codex123@localhost:5432/taxi_queue';
 const pool = new Pool({
     connectionString
 });
@@ -27,7 +27,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 const Taxi = require("./taxi");
-const taxi = Taxi();
+const taxi = Taxi(pool);
 
 app.get('/', function(req, res) {
 
@@ -66,7 +66,7 @@ app.post("/checkout", async function(req, res) {
     var name = req.body.name;
     var start = req.body.startP || "";
     var end = req.body.endP || "";
-    var k = await taxi.bookJourney(start, end)
+    var k = await taxi.bookJourney(name,start, end)
     let bookedCount = await taxi.passengers()
     var price = await taxi.whichPrice(start, end)
     res.render("checkout", {
