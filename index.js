@@ -52,7 +52,6 @@ app.post("/availability", async function(req, res) {
 
 })
 app.post("/passenger", async function(req, res) {
-
     res.render("passenger", {
 
     });
@@ -60,8 +59,14 @@ app.post("/passenger", async function(req, res) {
 });
 
 app.post("/checkout", async function(req, res) {
+    console.log(req.body.name);
+    console.log(req.body.startP);
+    console.log(req.body.endP);
+    // console.log(req.body.name);
+    var name = req.body.name;
     var start = req.body.startP || "";
     var end = req.body.endP || "";
+    var k = await taxi.bookJourney(start, end)
     let bookedCount = await taxi.passengers()
     var price = await taxi.whichPrice(start, end)
     res.render("checkout", {

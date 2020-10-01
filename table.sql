@@ -9,3 +9,8 @@ create table taxi_journey (
     end_location text  not null,
 	price decimal(10,2)
 );
+
+create table taxi_reg(
+  id serial not null primary key,
+  reg_num text not null
+);

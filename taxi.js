@@ -2,8 +2,6 @@
 
 const beepbeep = require("beepbeep");
 
-let counterList = [];
-
 var passengerCount = 0;
 
 module.exports = function taxiApp(pool) {
@@ -29,10 +27,6 @@ module.exports = function taxiApp(pool) {
         await pool.query(INSERT_QUERY, [name])
     }
 
-    function getCount() {
-        return
-    }
-
     function passengers() {
 
         if (passengerCount < 15) {
@@ -44,6 +38,12 @@ module.exports = function taxiApp(pool) {
         return passengerCount;
     }
 
+    function addToGraph() {
+
+
+
+    }
+
     function drivMsg() {
         return "Your taxi is ready to go!"
 
@@ -52,8 +52,10 @@ module.exports = function taxiApp(pool) {
         passengers()
         var msg = "";
         if (name) {
+            endPoint
             if (startPoint !== endPoint) {
-                const INSERT_QUERY = ' insert into taxi_journey (start_location,end_location,price) values ($1,$2,$3)';
+                // var price = await whichPrice(startPoint, endPoint);
+                const INSERT_QUERY = (' insert into taxi_journey (start_location,end_location,price) values ($1,$2,$3)');
                 const price = await whichPrice(startPoint, endPoint);
 
                 await pool.query(INSERT_QUERY, [startPoint, endPoint, price]);

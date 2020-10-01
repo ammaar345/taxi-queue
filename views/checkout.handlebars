@@ -1,46 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<script type="text/javascript">
-window.onload = function () {
-   // For a pie chart
-var chart = new Chart(ctx, {
-   type: 'pie',
-   data: {
-      labels: ['Open seats', 'Booked seats'],
-      datasets: [{
-         data: [{{open}}, {{booked}}],
-         backgroundColor: 'rgba(0,119, 220, 0.2)'
-      }]
+    <script type="text/javascript">
+        window.onload = function () {
+            // For a pie chart
+            var chart = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ['Open seats', 'Booked seats'],
+                    datasets: [{
+                        data: [{{ open }}, {{ booked }}],
+                backgroundColor: 'rgba(0,119, 220, 0.2)'
+            }]
    },
-   options: {
-      pieceLabel: {
-         render: 'value' //show values
-      }
-   }
+            options: {
+            pieceLabel: {
+                render: 'value' //show values
+            }
+        }
 });
 }
-</script>
- 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
-{{!-- <script src="https://cdn.rawgit.com/emn178/Chart.PieceLabel.js/master/build/Chart.PieceLabel.min.js"></script>  --}}
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
 </head>
+
 <body>
 
-<canvas id="ctx"></canvas>
-    <br/>
+    <canvas id="ctx"></canvas>
+    <br />
     <div class="alert">
-  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-   Booking Successful!
-</div>
-{{!-- <div class="alerttwo">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        Booking Successful!
+    </div>
+    {{!-- <div class="alerttwo">
   <span class="closebtntwo" onclick="this.parentElement.style.display='none';">&times;</span>
   Booking Not Successful!
 </div> --}}
-<br/>
-<p class="pricecount">Price: R{{price}}</p>
+    <br />
+    <p class="pricecount">Price: R{{price}}</p>
 </body>
+
 </html>

@@ -13,17 +13,18 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1><span>Passengers</span> details!</h1>
-        <br />
-        <div class="row">
-            <label for="username" class="passengerName">Passenger name:</label>
-            <input type="text" id="styled-select" name="name" value="">
+    <form action="/checkout" method="POST">
+
+        <div class="container">
+            <h1><span>Passengers</span> details!</h1>
             <br />
-            <br />
-            <form action="/checkout" method="POST">
-            <label for="destination" class="label-2">Start destination:</label>
-            <select name="startP" id="styled-select">
+            <div class="row">
+                <label for="username" class="passengerName">Passenger name:</label>
+                <input type="text" required id="styled-select" name="name" value="">
+                <br />
+                <br />
+                <label for="destination" class="label-2">Start destination:</label>
+                <select name="startP" required id="styled-select">
 
                     <option value="C">Cape Town</option>
                     <option value="K">Khayelitsha</option>
@@ -35,20 +36,20 @@
                 <br />
                 <br />
 
-            <label for="destination" class="label-2">End destination:</label>
-            <select name="endP" id="styled-select">
-                <!-- <option value="">----choose an option----</option> -->
-                <option value="K">Khayelitsha</option>
-                <option value="C">Cape Town</option>
-                <option value="D ">Delft</option>
-                <option value="G">Gugulethu</option>
-                <option value="MP">Mitchells Plain</option>
+                <label for="destination" class="label-2">End destination:</label>
+                <select required name="endP" id="styled-select">
+                    <!-- <option value="">----choose an option----</option> -->
+                    <option value="K">Khayelitsha</option>
+                    <option value="C">Cape Town</option>
+                    <option value="D ">Delft</option>
+                    <option value="G">Gugulethu</option>
+                    <option value="MP">Mitchells Plain</option>
 
                 </select>
                 <br />
                 <br />
                 <label for="destination" class="label-2">Departing Time:</label>
-                <select name="passenger" id="styled-select">
+                <select required name="passenger" id="styled-select">
 
                     <option value="07:00-09:00am">07:00-09:00am</option>
                     <option value="09:00-11:00am">09:00-11:00am</option>
@@ -58,15 +59,15 @@
                 <br />
                 <br />
                 <div class="myButton">
-           
-            <input type="submit" name="btnConfirm" id="" value="Confirm">
-            
-</form>
-            
-            <!-- <script>
+
+                    <input type="submit" required name="btnConfirm" id="" value="Confirm">
+
+    </form>
+
+    <!-- <script>
                 var currentTime = new Date().toLocaleTimeString()
             </script> -->
-        </div>
+    </div>
     </div>
 </body>
 
