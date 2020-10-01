@@ -2,29 +2,21 @@ const express = require("express");
 const exphbs = require('express-handlebars');
 const bodyParser = require("body-parser")
 const app = express();
-const taxi = require("./taxi");
-let taxiFunction = taxi()
-const flash = require('express-flash');
-const session = require('express-session');
+// const flash = require('express-flash');
+// const session = require('express-session');
 const pg = require("pg");
-
-
-const Pool = pg.Pool;
 var beep = require('beepbeep')
-
-// which db connection to use
-const connectionString = process.env.DATABASE_URL || 'postgresql://codex:ps123@localhost:5432/taxi_queue';
-
+ const Pool = pg.Pool;
+ const connectionString = process.env.DATABASE_URL || 'postgresql://codex:codex123@localhost:5432/taxi_queue';
 const pool = new Pool({
   connectionString
 });
-//const greet = Greet(pool);
-app.use(session({
-  secret: "<add a secret string here>",
-  resave: false,
-  saveUninitialized: true
-}));
-app.use(flash());
+// app.use(session({
+//   secret: "<add a secret string here>",
+//   resave: false,
+//   saveUninitialized: true
+// }));
+// app.use(flash());
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 app.engine('handlebars', exphbs({
@@ -33,43 +25,47 @@ app.engine('handlebars', exphbs({
 app.use(express.static("public"))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-app.get('/', async function (req, res) {
-  beep(3[1000])
+
+const Taxi = require("./taxi");
+const taxi = Taxi();
+
+app.get('/',  function (req, res) {
+
   res.render("home", {
 
   })
+
 })
 
-app.post("/taxi-association", function (req, res) {
+app.post("/taxi-association",async function (req, res) {
 
   res.render("association", {
-    age: 93
+
   })
 })
-app.post("/availability", function (req, res) {
-
-
-
+app.post("/availability", async function (req, res) {
+  
   res.render("availability", {
 
   })
+ 
+
 })
+app.post("/checkout",async function (req, res) {
 
-app.post("/checkout", function (req, res){
+  res.render("checkout", {
 
-    res.render("checkout", {
+  })
+})
+app.post("/passenger",async function (req, res) {
+  console.log(req.body.startP)
+  console.log(req.body.endP)
 
-
-    });
-
-});
-
-app.post("/passenger", function (req, res) {
   res.render("passenger", {
 
   })
 })
-const PORT = process.env.PORT || 5801;
+const PORT = process.env.PORT || 2090;
 app.listen(PORT, function () {
 
   console.log("App started at port:", PORT);

@@ -10,41 +10,38 @@
 
 <body>
     <h2>Driver's Availability</h2>
-    <input type="radio" id="radioAv" name="radioDriver" value="">
-    <label for="driverAvailable">Available</label><br>
-    <input type="radio" id="radioAv" name="radioDriver" value="">
-    <label for="driver"> Unavailable</label><br>
-    <br />
-    <label for="destination" class="label-2">Start :</label>
-    <select name="location" id="styled-select">
-
-        <option value="Cape Town">Cape Town</option>
-        <option value="Khayelitsha">Khayelitsha</option>
-        <option value="Delft">Delft</option>
-        <option value="Gugulethu">Gugulethu</option>
-        <option value="Mitchells Plain">Mitchells Plain</option>
-
-    </select>
-    <br />
-    <br />
-
-    <label for="destination" class="label-2">End :</label>
-    <select name="passenger" id="styled-select">
-        <!-- <option value="">----choose an option----</option> -->
-        <option value="Cape Town">Cape Town</option>
-        <option value="Sea Point">Sea Point</option>
-        <option value="Century City">Century City</option>
-        <option value="Claremont">Claremont</option>
-        <option value="Bellville">Bellville</option>
-
-    </select>
-    <br />
-    <br />
-    <form action="/more" class="myButton">
-        <input type="submit" value="Confirm">
-    </form>
+    <form action="/availability" method="POST">
+<div><input type="checkbox" id="checkboxAv" name="checkBoxDriver" value="true"> <label for="checkBoxDriver">Available</label></div>
 
 
+ <label for="destination" class="label-2">Start :</label>
+            <select name="start" id="location-select">
+                <!-- <option value="">----choose an option----</option> -->
+                <option value="C">Cape Town</option>
+                <option value="K">Khayelitsha</option>
+                <option value="D">Delft</option>
+                <option value="G">Gugulethu</option>
+                <option value="MP">Mitchells Plain</option>
+
+            </select>
+            <br />
+            <br/>
+
+            <label for="destination" class="label-2">End :</label>
+            <select name="end" id="passenger-select">
+                <!-- <option value="">----choose an option----</option> -->
+                <option value="C">Cape Town</option>
+                <option value="K">Khayelitsha</option>
+                <option value="D">Delft</option>
+                <option value="G">Gugulethu</option>
+                <option value="MP">Mitchells Plain</option>
+
+            </select>
+            <br/>
+            <br/>
+<input type="submit" value="Confirm">
+       
+</form>
 </body>
 
 </html>

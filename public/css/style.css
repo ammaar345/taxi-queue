@@ -3,8 +3,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* background-color:#444343 ; */
-    font-size: large;
+    
 }
 select{width: 7 em;}
 /* button{
@@ -58,7 +57,12 @@ input[type="submit"]{
 }
 
 input[type="submit"]:hover{
- background-color: lightseagreen; 
+ background-color: lightseagreen;} 
+h1,h2,h3,h4{
+    display: inline-block;
+}
+input[type="submit"]:hover{
+ background-color:  lightseagreen; 
  color: black ; 
 }
 
