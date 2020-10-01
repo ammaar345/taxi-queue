@@ -5,12 +5,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-<<<<<<< HEAD
-    background-color:#444343 ;
-    font-size: large;
-=======
     
->>>>>>> 6842771c64d9109b6259ca71bed453131bdc8a9a
 }
 select{width: 7 em;}
 /* button{
@@ -62,17 +57,11 @@ input[type="submit"]{
 
      
 }
-<<<<<<< HEAD
 h1,h2,h3,h4{
     display: inline-block;
 }
 input[type="submit"]:hover{
  background-color:  lightseagreen; 
-=======
-
-input[type="submit"]:hover{
- background-color: lightseagreen; 
->>>>>>> 6842771c64d9109b6259ca71bed453131bdc8a9a
  color: black ; 
 }
 
