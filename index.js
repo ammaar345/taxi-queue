@@ -3,24 +3,20 @@ const exphbs = require('express-handlebars');
 const bodyParser = require("body-parser")
 const app = express();
 const taxi = require("./taxi");
-let taxiFunction=taxi()
+let taxiFunction = taxi()
 const flash = require('express-flash');
 const session = require('express-session');
 const pg = require("pg");
-<<<<<<< HEAD
-var beep = require('beepbeep')
-=======
-// var Chart = require('chart.js');
-//  var ctx = 'myChart';
-// var ctx = $("#myChart").getContext("2d");
 
->>>>>>> 6842771c64d9109b6259ca71bed453131bdc8a9a
+
 const Pool = pg.Pool;
 var beep = require('beepbeep')
 
-const connectionString = process.env.DATABASE_URL || 'postgresql://sneakygoblin:codex123@localhost:5432/greetings_webapp';
+// which db connection to use
+const connectionString = process.env.DATABASE_URL || 'postgresql://codex:ps123@localhost:5432/taxi_queue';
+
 const pool = new Pool({
-    connectionString
+  connectionString
 });
 //const greet = Greet(pool);
 app.use(session({
@@ -40,33 +36,37 @@ app.use(bodyParser.json())
 app.get('/', async function (req, res) {
   beep(3[1000])
   res.render("home", {
-   
+
   })
 })
 
-app.post("/taxi-association",  function (req, res) {
- 
+app.post("/taxi-association", function (req, res) {
+
   res.render("association", {
-      age: 93
+    age: 93
   })
 })
-app.post("/availability", function(req,res){
- 
+app.post("/availability", function (req, res) {
 
 
-res.render("availability",{
 
-})
-})
-app.post("/checkout", function(req,res){
+  res.render("availability", {
 
-  res.render("checkout",{
-  
   })
-  })
-app.post("/passenger",  function (req, res) {
-   res.render("passenger", {
-  
+})
+
+app.post("/checkout", function (req, res){
+
+    res.render("checkout", {
+
+
+    });
+
+});
+
+app.post("/passenger", function (req, res) {
+  res.render("passenger", {
+
   })
 })
 const PORT = process.env.PORT || 5801;

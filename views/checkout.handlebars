@@ -4,17 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script>
-        swal({
-  title: "Good job!",
-  text: "Your booking has been successful!",
-  icon: "success",
-  button: "more details!",
-});
-    </script>
+<script type="text/javascript">
+window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer",
+    {
+        fontColor: "fff0000",
+        backgroundColor: "#394f55",
+        title:{
+            text: "Passengers Remaining"
+        },
+        legend: {
+            maxWidth: 350,
+            itemWidth: 120
+        },
+        data: [
+        {
+            type: "pie",
+            showInLegend: true,
+            legendText: "{indexLabel} #percent%",
+            indexLabel: "",
+            dataPoints: [
+                 { x: 10, y: 25 , indexLabel: "Passengers"},
+                 { x: 20, y: 50 , indexLabel: "" } 
+
+            ]
+        }
+        ]
+    });
+    chart.render();
+}
+</script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </head>
 <body>
-    
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
 </body>
 </html>

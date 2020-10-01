@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
+
 <body>
     <h2>Driver's Availability</h2>
-<input type="checkbox" id="checkboxAv" name="checkboxDriver" value="">
-<label for="driverAvailable">Available</label><br>
-<input type="checkbox" id="checkboxAv" name="checkboxDriver" value="">
-<label for="driver"> Unavailable</label><br>
-<br/>
- <label for="destination" class="label-2">Start :</label>
-            <select name="location" id="location-select">
-                <!-- <option value="">----choose an option----</option> -->
-                <option value="Cape Town">Cape Town</option>
-                <option value="Khayelitsha">Khayelitsha</option>
-                <option value="Delft">Delft</option>
-                <option value="Gugulethu">Gugulethu</option>
-                <option value="Mitchells Plain">Mitchells Plain</option>
+    <input type="radio" id="radioAv" name="radioDriver" value="">
+    <label for="driverAvailable">Available</label><br>
+    <input type="radio" id="radioAv" name="radioDriver" value="">
+    <label for="driver"> Unavailable</label><br>
+    <br />
+    <label for="destination" class="label-2">Start :</label>
+    <select name="location" id="styled-select">
 
-            </select>
-            <br />
-            <br/>
+        <option value="Cape Town">Cape Town</option>
+        <option value="Khayelitsha">Khayelitsha</option>
+        <option value="Delft">Delft</option>
+        <option value="Gugulethu">Gugulethu</option>
+        <option value="Mitchells Plain">Mitchells Plain</option>
 
-            <label for="destination" class="label-2">End :</label>
-            <select name="passenger" id="passenger-select">
-                <!-- <option value="">----choose an option----</option> -->
-                <option value="Cape Town">Cape Town</option>
-                <option value="Sea Point">Sea Point</option>
-                <option value="Century City">Century City</option>
-                <option value="Claremont">Claremont</option>
-                <option value="Bellville">Bellville</option>
+    </select>
+    <br />
+    <br />
 
-            </select>
-            <br/>
-            <br/>
-            <input type="submit" value="Confirm">
-{{data}}
+    <label for="destination" class="label-2">End :</label>
+    <select name="passenger" id="styled-select">
+        <!-- <option value="">----choose an option----</option> -->
+        <option value="Cape Town">Cape Town</option>
+        <option value="Sea Point">Sea Point</option>
+        <option value="Century City">Century City</option>
+        <option value="Claremont">Claremont</option>
+        <option value="Bellville">Bellville</option>
+
+    </select>
+    <br />
+    <br />
+    <form action="/more" class="myButton">
+        <input type="submit" value="Confirm">
+    </form>
 
 
-<input type="submit" value="Confirm">
 </body>
+
 </html>

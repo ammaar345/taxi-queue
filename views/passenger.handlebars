@@ -34,9 +34,9 @@
             <br />
             <br />
 
-            <label for="destination" class="label-2">End :</label>
-            <select name="passenger" id="passenger-select">
-                <!-- <option value="">----choose an option----</option> -->
+            <label for="destination" class="label-2">End destination:</label>
+            <select name="passenger" id="styled-select">
+
                 <option value="Cape Town">Cape Town</option>
                 <option value="Sea Point">Sea Point</option>
                 <option value="Century City">Century City</option>
@@ -44,12 +44,22 @@
                 <option value="Bellville">Bellville</option>
 
             </select>
+            <br />
+            <br />
+            <label for="destination" class="label-2">Departing Time:</label>
+            <select name="passenger" id="styled-select">
 
-            <p>Depart Time: <span id="time"></span></p>
-            <p>Arrival Time: <span id="time"></span></p>
-            <form action="/checkout" method="POST">
-            <input type="submit" name="btnConfirm" id="" value="Confirm">
-</form>
+                <option value="07:00-09:00am">07:00-09:00am</option>
+                <option value="09:00-11:00am">09:00-11:00am</option>
+                <option value="13:00-15:00am">13:00-15:00am</option>
+
+            </select>
+            <br/>
+            <br/>
+
+            <form action="/checkout" method="POST" class="myButton">
+                <input type="submit" name="btnConfirm" id="" value="Submit">
+            </form>
             <p class="pricecount">Price:</p>
             <!-- <script>
                 var currentTime = new Date().toLocaleTimeString()
