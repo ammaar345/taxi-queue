@@ -52,20 +52,20 @@ app.post("/availability", async function (req, res) {
 
 })
 app.post("/passenger",async function (req, res) {
-  var start = req.body.startP || "";
-  var end = req.body.endP || "";
 
-  var price= await taxi.whichPrice(start,end)
   res.render("passenger", {
-    price
+    
   });
 
 });
 
 app.post("/checkout",async function (req, res) {
+  var start = req.body.startP || "";
+  var end = req.body.endP || "";
 
+  var price= await taxi.whichPrice(start,end)
   res.render("checkout", {
-    price:"0.00"
+    price
   })
 })
 const PORT = process.env.PORT || 2090;
