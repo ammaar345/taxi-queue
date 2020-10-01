@@ -7,7 +7,7 @@ const app = express();
 const pg = require("pg");
 var beep = require('beepbeep')
  const Pool = pg.Pool;
- const connectionString = process.env.DATABASE_URL || 'postgresql://codex:codex123@localhost:5432/taxi_queue';
+ const connectionString = process.env.DATABASE_URL || 'postgresql://sneakygoblin:codex123@localhost:5432/taxi_queue';
 const pool = new Pool({
   connectionString
 });
@@ -51,18 +51,21 @@ app.post("/availability", async function (req, res) {
  
 
 })
-app.post("/checkout",async function (req, res) {
-
-  res.render("checkout", {
-
-  })
-})
 app.post("/passenger",async function (req, res) {
-  console.log(req.body.startP)
-  console.log(req.body.endP)
 
   res.render("passenger", {
+    
+  });
 
+});
+
+app.post("/checkout",async function (req, res) {
+  var start = req.body.startP || "";
+  var end = req.body.endP || "";
+
+  var price= await taxi.whichPrice(start,end)
+  res.render("checkout", {
+    price
   })
 })
 const PORT = process.env.PORT || 2090;
