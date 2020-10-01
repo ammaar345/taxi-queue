@@ -3,7 +3,6 @@
 const beepbeep = require("beepbeep");
 
 module.exports = function taxiApp(pool) {
-
     async function whichPrice(start, end) {
         var price = 0;
         if (start=== "C" && end=== "D" || end==="D" &&start==="C") {
@@ -24,6 +23,13 @@ module.exports = function taxiApp(pool) {
         if (availablility = true) {
             bookJourney()
         }
+    }
+    async function matchPandD(startD,startP,endD,endP){
+if(startD==startP && endD===endP)
+{return true
+
+
+}
     }
 async function insertBooking(name){
     var INSERT_QUERY="insert into booking (names) values($1)"
