@@ -45,8 +45,12 @@
 
             </select>
 
-            <p>Depart Time: <span id="time"></span></p>
-            <p>Arrival Time: <span id="time"></span></p>
+            <p>Depart Time: <span id="time"><select name="location" id="location-select">
+                <!-- <option value="">----choose an option----</option> -->
+                <option value="Cape Town">07:00-09:00</option>
+                <option value="Khayelitsha">10:00-12:00</option>
+                <option value="Delft">16:00-18:00</option>
+            </select></span></p>
             <form action="/checkout" method="POST">
             <input type="submit" name="btnConfirm" id="" value="Confirm">
 </form>

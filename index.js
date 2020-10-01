@@ -7,17 +7,8 @@ let taxiFunction=taxi()
 const flash = require('express-flash');
 const session = require('express-session');
 const pg = require("pg");
-<<<<<<< HEAD
 var beep = require('beepbeep')
-=======
-// var Chart = require('chart.js');
-//  var ctx = 'myChart';
-// var ctx = $("#myChart").getContext("2d");
-
->>>>>>> 6842771c64d9109b6259ca71bed453131bdc8a9a
 const Pool = pg.Pool;
-var beep = require('beepbeep')
-
 const connectionString = process.env.DATABASE_URL || 'postgresql://sneakygoblin:codex123@localhost:5432/greetings_webapp';
 const pool = new Pool({
     connectionString
@@ -69,7 +60,7 @@ app.post("/passenger",  function (req, res) {
   
   })
 })
-const PORT = process.env.PORT || 5801;
+const PORT = process.env.PORT || 5891;
 app.listen(PORT, function () {
 
   console.log("App started at port:", PORT);
