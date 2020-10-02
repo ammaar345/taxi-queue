@@ -11,7 +11,7 @@
 <body>
     <h2>Driver's Availability</h2>
     <form action="/availability" method="POST">
-        <div><input type="checkbox" id="checkboxAv" name="checkBoxDriver" value="true"> <label
+        {{!-- <div><input type="checkbox" id="checkboxAv" name="checkBoxDriver" value="true"> <label
                 for="checkBoxDriver">Available</label></div>
 
 
@@ -39,8 +39,10 @@
 
         </select>
         <br />
-        <br />
-        <input type="submit" value="Confirm">
+        <br /> --}}
+    <div class="msg">
+{{message}}
+    </div>    
 
     </form>
 </body>

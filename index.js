@@ -45,9 +45,9 @@ app.post("/taxi-association", async function(req, res) {
     })
 })
 app.post("/availability", async function(req, res) {
-
+    const message = taxi.drivMsg(taxi.passengers())
     res.render("availability", {
-
+        message
     })
 
 })

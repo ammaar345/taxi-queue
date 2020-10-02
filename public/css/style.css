@@ -25,6 +25,10 @@ h1 span {
     color: lightgreen;
 }
 
+.msg {
+    color: green
+}
+
 
 /* select {
     font-size: 0.9rem;

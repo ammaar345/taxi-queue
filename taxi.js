@@ -1,4 +1,3 @@
-
 const beepbeep = require("beepbeep");
 
 var passengerCount = 0;
@@ -9,12 +8,9 @@ module.exports = function taxiApp(pool) {
         if (start !== end) {
             if (start === "Cape Town" || "Delft" && end === "Delft" || "Cape Town") {
                 price = 20;
-            }
-
-          else  if (start === "Khayelitsha" || "Cape Town" && end === "Khayelitsha" || "Cape Town") {
+            } else if (start === "Khayelitsha" || "Cape Town" && end === "Khayelitsha" || "Cape Town") {
                 price = 15;
-            }
-            else price = 10
+            } else price = 10
         }
         // if (start&&end ===)
         // else {
@@ -29,7 +25,7 @@ module.exports = function taxiApp(pool) {
 
         if (passengerCount < 15) {
             passengerCount++;
-        } else if (passengerCount = 15) {
+        } else if (passengerCount = 15) { //make 15
             beepbeep(2)
             passengerCount = 0;
         }
@@ -42,8 +38,13 @@ module.exports = function taxiApp(pool) {
 
     }
 
-    function drivMsg() {
-        return "Your taxi is ready to go!"
+    function drivMsg(passenger) {
+        if (passenger === 15) {
+            return "Your taxi is ready to go!"
+
+        } else {
+            return "Still awaiting passengers."
+        }
 
     }
     async function insertBooking(name) {
@@ -52,7 +53,7 @@ module.exports = function taxiApp(pool) {
     }
 
     async function bookJourney(name, startPoint, endPoint) {
-        passengers()
+
         var msg = "";
         if (name) {
             endPoint
@@ -65,8 +66,7 @@ module.exports = function taxiApp(pool) {
                 await insertBooking(name)
 
                 msg = "Your journey has been booked successfully." //then add to database 
-            }
-            else{ return false}
+            } else { return false }
             return msg
         }
 
