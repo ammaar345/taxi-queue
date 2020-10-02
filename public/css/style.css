@@ -88,7 +88,7 @@ input[type="submit"]:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 350px;
-    background-color: #394f55;
+    background-color: rgb(19, 18, 18);
     color: white;
     padding: 40px;
     border-radius: 5px;
