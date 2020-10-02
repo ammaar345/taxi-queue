@@ -11,7 +11,7 @@ module.exports = function taxiApp(pool) {
                 price = 20;
             }
 
-            if (start === "Khayelitsha" || "Cape Town" && end === "Khayelitsha" || "Cape Town") {
+          else  if (start === "Khayelitsha" || "Cape Town" && end === "Khayelitsha" || "Cape Town") {
                 price = 15;
             }
             else price = 10
@@ -66,6 +66,7 @@ module.exports = function taxiApp(pool) {
 
                 msg = "Your journey has been booked successfully." //then add to database 
             }
+            else{ return false}
             return msg
         }
 
