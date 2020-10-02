@@ -1,16 +1,11 @@
 create table booking(
 	id serial not null primary key,
-    names text not null
+    name text 
 );
 
 create table taxi_journey (
 	id serial not null primary key,
-    start_location text not null,
-    end_location text  not null,
+    start_location text ,
+    end_location text  ,
 	price decimal(10,2)
-);
-
-create table taxi_reg(
-  id serial not null primary key,
-  reg_num text not null
 );
