@@ -1,6 +1,6 @@
 create table booking(
 	id serial not null primary key,
-    name text 
+  name text 
 );
 
 create table taxi_journey (

@@ -7,7 +7,7 @@ const app = express();
 const pg = require("pg");
 var beep = require('beepbeep')
 const Pool = pg.Pool;
-const connectionString = process.env.DATABASE_URL || 'postgresql://sneakygoblin:codex123@localhost:5432/taxi_queue';
+const connectionString = process.env.DATABASE_URL || 'postgresql://sim:pg123@localhost:5432/taxi_queue';
 const pool = new Pool({
     connectionString
 });
@@ -37,6 +37,7 @@ app.get('/', function(req, res) {
 
 })
 
+
 app.post("/taxi-association", async function(req, res) {
 
     res.render("association", {
@@ -48,7 +49,6 @@ app.post("/availability", async function(req, res) {
     res.render("availability", {
 
     })
-
 
 })
 app.post("/passenger", async function(req, res) {
@@ -66,7 +66,7 @@ app.post("/checkout", async function(req, res) {
     var name = req.body.name;
     var start = req.body.startP || "";
     var end = req.body.endP || "";
-    var k = await taxi.bookJourney(name,start, end)
+    var k = await taxi.bookJourney(name, start, end)
     let bookedCount = await taxi.passengers()
     var price = await taxi.whichPrice(start, end)
     res.render("checkout", {
@@ -75,7 +75,7 @@ app.post("/checkout", async function(req, res) {
         booked: bookedCount
     })
 })
-const PORT = process.env.PORT || 2090;
+const PORT = process.env.PORT || 2001;
 app.listen(PORT, function() {
 
     console.log("App started at port:", PORT);
