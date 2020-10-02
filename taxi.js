@@ -6,12 +6,15 @@ var passengerCount = 0;
 module.exports = function taxiApp(pool) {
     async function whichPrice(start, end) {
         var price = 0;
-        if (start === "Cape Town" && end === "Delft" || end === "Delft" && start === "Cape Town") {
-            price = 20;
-        }
+        if (start !== end) {
+            if (start === "Cape Town" || "Delft" && end === "Delft" || "Cape Town") {
+                price = 20;
+            }
 
-        if (start === "Khayelitsha" && end === "Cape Town" || end === "Khayelitsha" && start === "Cape Town") {
-            price = 15;
+          else  if (start === "Khayelitsha" || "Cape Town" && end === "Khayelitsha" || "Cape Town") {
+                price = 15;
+            }
+            else price = 10
         }
         // if (start&&end ===)
         // else {
@@ -21,7 +24,7 @@ module.exports = function taxiApp(pool) {
 
     }
 
-   
+
     function passengers() {
 
         if (passengerCount < 15) {
@@ -63,6 +66,7 @@ module.exports = function taxiApp(pool) {
 
                 msg = "Your journey has been booked successfully." //then add to database 
             }
+            else{ return false}
             return msg
         }
 
