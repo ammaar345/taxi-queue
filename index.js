@@ -75,7 +75,7 @@ app.post("/checkout", async function(req, res) {
         booked: bookedCount
     })
 })
-const PORT = process.env.PORT || 2090;
+const PORT = process.env.PORT || 2010;
 app.listen(PORT, function() {
 
     console.log("App started at port:", PORT);
